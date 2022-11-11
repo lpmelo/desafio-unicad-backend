@@ -6,6 +6,8 @@ const app = express();
 
 const cors = require("cors");
 
+var port = process.env.PORT || 8000;
+
 app.use(cors()); // Use this after the variable declaration
 
 app.use(express.json());
@@ -52,4 +54,4 @@ app.get(`/deliveries`, (req, res) => {
 // APLICAR MIDDLEWARES
 
 // MANDAR O SERVIDOR RODAR
-app.listen(3333, () => console.log("Server is Running"));
+app.listen(port, () => console.log("Server is Running"));
